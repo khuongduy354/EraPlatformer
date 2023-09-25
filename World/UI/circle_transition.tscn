@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://bunrv5ps0or1p"]
+
+[ext_resource type="Shader" path="res://World/UI/circle_transition.gdshader" id="1_8aoxq"]
+[ext_resource type="Script" path="res://World/UI/circle_transition.gd" id="2_t7eo6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0wf45"]
+shader = ExtResource("1_8aoxq")
+shader_parameter/circle_size = 1.05
+shader_parameter/screen_width = 1280.0
+shader_parameter/screen_height = 720.0
+
+[sub_resource type="Animation" id="Animation_xgwic"]
+resource_name = "trans_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.05, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rh1xk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.05]
+}
+
+[sub_resource type="Animation" id="Animation_8vo6m"]
+resource_name = "trans_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.05]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ftgv0"]
+_data = {
+"RESET": SubResource("Animation_rh1xk"),
+"trans_in": SubResource("Animation_xgwic"),
+"trans_out": SubResource("Animation_8vo6m")
+}
+
+[node name="CircleTransition" type="ColorRect"]
+material = SubResource("ShaderMaterial_0wf45")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_t7eo6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ftgv0")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://4cn4x88l0rbq"]
+
+[ext_resource type="Script" path="res://Platforms/platform_manager.gd" id="1_3esx7"]
+
+[node name="PlatformManager" type="Node2D"]
+script = ExtResource("1_3esx7")
+
+[node name="Platforms" type="Node2D" parent="."]
