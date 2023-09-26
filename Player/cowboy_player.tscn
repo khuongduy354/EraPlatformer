@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://duk62k0hds2yd"]
+
+[ext_resource type="PackedScene" uid="uid://h2s2qeu0v268" path="res://Player/player.tscn" id="1_34sx1"]
+[ext_resource type="Texture2D" uid="uid://dajnqaxbkmcq4" path="res://assets/player/COWBOY Body.png" id="2_qty3w"]
+[ext_resource type="Texture2D" uid="uid://blkythpxlvsor" path="res://assets/player/COWBOY Hand.png" id="3_yr4xu"]
+[ext_resource type="Texture2D" uid="uid://ca3nuffdp8bpr" path="res://assets/player/COWBOY Head.png" id="4_jyyhs"]
+[ext_resource type="Texture2D" uid="uid://c6r6g4k2koraf" path="res://assets/player/ COWBOY Leg.png" id="5_njj4m"]
+
+[node name="CowboyPlayer" instance=ExtResource("1_34sx1")]
+
+[node name="DinoBody" parent="Sprites" index="0"]
+texture = ExtResource("2_qty3w")
+
+[node name="DinoHand" parent="Sprites" index="1"]
+texture = ExtResource("3_yr4xu")
+
+[node name="DinoHead" parent="Sprites" index="2"]
+texture = ExtResource("4_jyyhs")
+
+[node name="DinoLeg" parent="Sprites" index="3"]
+texture = ExtResource("5_njj4m")
+
+[node name="DinoLeg2" parent="Sprites" index="4"]
+texture = ExtResource("5_njj4m")

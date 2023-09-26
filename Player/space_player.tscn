@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://c03n0bl1gwna8"]
+
+[ext_resource type="PackedScene" uid="uid://h2s2qeu0v268" path="res://Player/player.tscn" id="1_khj7w"]
+[ext_resource type="Texture2D" uid="uid://d3d24bdiv0xjs" path="res://assets/player/SPACE Body.png" id="2_k1w74"]
+[ext_resource type="Texture2D" uid="uid://c4bbs5hpi1dgv" path="res://assets/player/SPACE Hand.png" id="3_6ke6j"]
+[ext_resource type="Texture2D" uid="uid://eeu24qym6qhu" path="res://assets/player/SPACE Head.png" id="4_uvw6r"]
+[ext_resource type="Texture2D" uid="uid://m7b6mpl8nq0k" path="res://assets/player/SPACE  Leg.png" id="5_8ywko"]
+
+[node name="SpacePlayer" instance=ExtResource("1_khj7w")]
+
+[node name="DinoBody" parent="Sprites" index="0"]
+texture = ExtResource("2_k1w74")
+
+[node name="DinoHand" parent="Sprites" index="1"]
+texture = ExtResource("3_6ke6j")
+
+[node name="DinoHead" parent="Sprites" index="2"]
+texture = ExtResource("4_uvw6r")
+
+[node name="DinoLeg" parent="Sprites" index="3"]
+texture = ExtResource("5_8ywko")
