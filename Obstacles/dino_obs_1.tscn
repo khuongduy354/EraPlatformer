@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce7kbiu3m0iju"]
+
+[ext_resource type="PackedScene" uid="uid://df1avq2fyyypa" path="res://Obstacles/obstacle.tscn" id="1_7t1yw"]
+[ext_resource type="Texture2D" uid="uid://dbfp3f1b7viwp" path="res://assets/objects/DINO Obstacle 1 2.png" id="2_kob37"]
+
+[node name="DinoObs1" instance=ExtResource("1_7t1yw")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_kob37")

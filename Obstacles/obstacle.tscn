@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://df1avq2fyyypa"]
+
+[ext_resource type="Script" path="res://Obstacle.gd" id="1_6otf5"]
+[ext_resource type="Texture2D" uid="uid://dkanxtmlu65y6" path="res://assets/objects/COWBOY Obstacle 1 1.png" id="2_b41rq"]
+
+[node name="Obstacle" type="Area2D"]
+script = ExtResource("1_6otf5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_b41rq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

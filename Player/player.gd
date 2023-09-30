@@ -1,6 +1,7 @@
 extends CharacterBody2D
+class_name Player
 
-@export var move_speed =1000 
+@export var move_speed =5000 
 @export var jump_force =500
 @onready var anim_p = $AnimationPlayer
 enum {MOVE, ATTACK}
@@ -17,12 +18,13 @@ func _attack(delta):
 	pass 
 	
 func _move(delta): 
-	if Input.is_action_just_pressed("attack"): 
-		state = ATTACK
+
 	velocity.x = move_speed *delta 
 	if Input.is_action_just_pressed("jump") and is_on_floor(): 
 		anim_p.play("jump")
 		velocity.y = -jump_force
+	elif is_on_floor() and Input.is_action_just_pressed("attack"): 
+		state = ATTACK
 	elif is_on_floor(): 
 		anim_p.play("walk")
 	move_and_slide()

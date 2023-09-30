@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://k4kprndoaapy"]
+
+[ext_resource type="PackedScene" uid="uid://df1avq2fyyypa" path="res://Obstacles/obstacle.tscn" id="1_r14p0"]
+[ext_resource type="Texture2D" uid="uid://cpyu2qpyy26e1" path="res://assets/objects/COWBOY Obstacle 2.png" id="2_7gdxn"]
+
+[node name="CowboyObs2" instance=ExtResource("1_r14p0")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_7gdxn")
