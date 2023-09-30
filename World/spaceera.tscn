@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://5cj5myiy7dot"]
+
+[ext_resource type="Texture2D" uid="uid://cmuudnbbqoiok" path="res://assets/UI/SPACE BG Back.png" id="1_1f4ot"]
+[ext_resource type="Texture2D" uid="uid://wbd57pg2r1wk" path="res://assets/UI/SPACE BG Front.png" id="2_yaeoc"]
+
+[node name="spaceera" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2, 1)
+motion_mirroring = Vector2(2553, 0)
+
+[node name="CowboyBgBack" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1275, 316)
+scale = Vector2(0.329416, 0.329416)
+texture = ExtResource("1_1f4ot")
+region_enabled = true
+region_rect = Rect2(0, 0, 7750, 1963)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(3284, 0)
+
+[node name="CowboyBgFront" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1642, 335)
+scale = Vector2(0.410413, 0.410413)
+texture = ExtResource("2_yaeoc")

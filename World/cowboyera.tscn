@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b212cof6ipoi0"]
+
+[ext_resource type="Texture2D" uid="uid://bqxoks1y4vswa" path="res://assets/UI/COWBOY BG Back.png" id="1_ek4wm"]
+[ext_resource type="Texture2D" uid="uid://dsuccqlwcqacv" path="res://assets/UI/COWBOY BG Front.png" id="2_rdc60"]
+
+[node name="cowboyera" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(2, 1)
+motion_mirroring = Vector2(2636, 0)
+
+[node name="CowboyBgBack" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1318, 311)
+scale = Vector2(0.329416, 0.329416)
+texture = ExtResource("1_ek4wm")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(3284, 0)
+
+[node name="CowboyBgFront" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1642, 338)
+scale = Vector2(0.410413, 0.410413)
+texture = ExtResource("2_rdc60")

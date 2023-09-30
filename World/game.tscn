@@ -7,10 +7,13 @@
 [node name="Game" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(3, 99)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(403, 418)
+position = Vector2(422, 655)
 scale = Vector2(184.136, -4.2811)
 shape = SubResource("RectangleShape2D_8v6os")
 
 [node name="Player" parent="." instance=ExtResource("1_apv6v")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
