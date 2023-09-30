@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcm01vldt8lk7"]
+
+[ext_resource type="StyleBox" uid="uid://dv47fb00n7y42" path="res://UI/panelstyle.tres" id="1_bap21"]
+[ext_resource type="PackedScene" uid="uid://cawxgmldqjoai" path="res://UI/GameButton.tscn" id="2_4xlv3"]
+
+[node name="CenterContainer" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(500, 600)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_bap21")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 130.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume" parent="Panel/MarginContainer/VBoxContainer" instance=ExtResource("2_4xlv3")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Resume"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Resume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart" parent="Panel/MarginContainer/VBoxContainer" instance=ExtResource("2_4xlv3")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/Restart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Restart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReturnMenu" parent="Panel/MarginContainer/VBoxContainer" instance=ExtResource("2_4xlv3")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label3" type="Label" parent="Panel/MarginContainer/VBoxContainer/ReturnMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+horizontal_alignment = 1
+vertical_alignment = 1

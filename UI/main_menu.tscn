@@ -1,0 +1,121 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfs5lu8cx422v"]
+
+[ext_resource type="PackedScene" uid="uid://cawxgmldqjoai" path="res://UI/GameButton.tscn" id="1_2jpy6"]
+[ext_resource type="StyleBox" uid="uid://dv47fb00n7y42" path="res://UI/panelstyle.tres" id="1_u5uuf"]
+[ext_resource type="Texture2D" uid="uid://2lv21r61qh4p" path="res://assets/UI/DINO BG back.png" id="3_ewyvq"]
+[ext_resource type="Texture2D" uid="uid://di4kh1hmb01da" path="res://assets/UI/DINO BG Front.png" id="4_r637i"]
+[ext_resource type="Texture2D" uid="uid://wbd57pg2r1wk" path="res://assets/UI/SPACE BG Front.png" id="5_etv5h"]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_u5uuf")
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 29.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Panel/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Menu" type="Label" parent="CenterContainer/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "MENU"
+horizontal_alignment = 1
+
+[node name="Start" parent="CenterContainer/Panel/CenterContainer/VBoxContainer" instance=ExtResource("1_2jpy6")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/CenterContainer/VBoxContainer/Start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" parent="CenterContainer/Panel/CenterContainer/VBoxContainer" instance=ExtResource("1_2jpy6")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="CenterContainer/Panel/CenterContainer/VBoxContainer/Exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Exit
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RateUs" parent="CenterContainer/Panel/CenterContainer/VBoxContainer" instance=ExtResource("1_2jpy6")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label3" type="Label" parent="CenterContainer/Panel/CenterContainer/VBoxContainer/RateUs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Rate Us!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Backgrounds" type="Sprite2D" parent="."]
+z_index = -99
+
+[node name="DinoBgBack" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(638, 227)
+scale = Vector2(0.248556, 0.248556)
+texture = ExtResource("3_ewyvq")
+
+[node name="DinoBgBack2" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(638, 227)
+scale = Vector2(0.248556, 0.248556)
+texture = ExtResource("4_r637i")
+
+[node name="DinoBgBack3" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(638, 272)
+scale = Vector2(0.248556, 0.248556)
+texture = ExtResource("5_etv5h")
+
+[node name="ColorRect" type="ColorRect" parent="Backgrounds"]
+offset_left = -357.0
+offset_top = 506.0
+offset_right = -317.0
+offset_bottom = 546.0
+scale = Vector2(51.7281, 7.43435)
+color = Color(0.65098, 0.623529, 0.588235, 1)

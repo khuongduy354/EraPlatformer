@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cawxgmldqjoai"]
+
+[ext_resource type="Texture2D" uid="uid://cflexs0jb5o2y" path="res://assets/UI/Button Texture.png" id="1_wp26t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii823"]
+atlas = ExtResource("1_wp26t")
+region = Rect2(208, 678, 1590, 624)
+
+[node name="TextureButton" type="TextureButton"]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_ii823")
+ignore_texture_size = true
+stretch_mode = 5

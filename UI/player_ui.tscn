@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://csx5ka4htbqge"]
+
+[ext_resource type="Texture2D" uid="uid://gdjmvyaefjyu" path="res://assets/UI/Heart.png" id="1_85muj"]
+[ext_resource type="Texture2D" uid="uid://kjfwjtofb1jg" path="res://assets/UI/PAUSE.png" id="2_7nvts"]
+
+[node name="PlayerUI" type="CanvasLayer"]
+
+[node name="Pause" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(200, 100)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 32.0
+offset_right = 100.0
+offset_bottom = 132.0
+grow_horizontal = 2
+texture_normal = ExtResource("2_7nvts")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Healths" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -296.0
+offset_top = 32.0
+offset_right = -48.0
+offset_bottom = 132.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Healths"]
+custom_minimum_size = Vector2(80, 100)
+layout_mode = 2
+texture = ExtResource("1_85muj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Healths"]
+custom_minimum_size = Vector2(80, 100)
+layout_mode = 2
+texture = ExtResource("1_85muj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Healths"]
+custom_minimum_size = Vector2(80, 100)
+layout_mode = 2
+texture = ExtResource("1_85muj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Score" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 40.0
+offset_right = 217.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 54
+text = "12345"
